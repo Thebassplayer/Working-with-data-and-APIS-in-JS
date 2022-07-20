@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+#issMap {
+  height: 800px;
+  width: 1000px;
+}
