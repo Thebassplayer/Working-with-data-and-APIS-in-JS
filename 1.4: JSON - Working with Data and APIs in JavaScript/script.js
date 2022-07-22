@@ -25,7 +25,7 @@ async function getISS() {
   const response = await fetch(api_url);
   const data = await response.json();
   console.log(data);
-  const { latitude, longitude, velocity } = data;
+  const { latitude, longitude, velocity, altitude } = data;
   marker.setLatLng([latitude, longitude]);
   if (firstTimeView) {
     myMap.setView([latitude, longitude], 3);
@@ -35,6 +35,7 @@ async function getISS() {
   document.getElementById('lat').innerText = latitude.toFixed(2);
   document.getElementById('long').innerText = longitude.toFixed(2);
   document.getElementById('vel').innerText = parseInt(velocity);
+  document.getElementById('alt').innerText = parseInt(altitude * 10000);
 }
 
 getISS();

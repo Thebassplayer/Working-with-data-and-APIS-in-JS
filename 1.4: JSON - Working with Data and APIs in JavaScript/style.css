@@ -2,6 +2,17 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* align horizontaly */
+  justify-content: center; /* align verticaly */
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
 #issMap {
   height: 800px;
   width: 1000px;
